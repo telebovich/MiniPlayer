@@ -38,10 +38,26 @@ namespace MiniPlayer
             openFile.Filter = "Media Files|*.mpg;*.avi;*.wma;*.mov;" +
                         "*.wav;*.mp2;*.mp3|All Files|*.*";
 
-            if (DialogResult.Value == openFile.ShowDialog())
+            Nullable<bool> result = openFile.ShowDialog();
+
+            if (result == true)
             {
                 FilgraphManager filterGraph = new FilgraphManager();
-                Ime
+                
+                // This is to show video in a separate control
+                // IMediaControl mc = filterGraph as IMediaControl;
+
+                IBasicAudio m_objBasicAudio = filterGraph as IBasicAudio;
+                IVideoWindow m_objVideoWindow;
+
+                try
+                {
+                    m_objVideoWindow = filterGraph as IVideoWindow;
+                }
+                catch (Exception ex)
+                {
+                    m_objVideoWindow = null;
+                }
             }
         }
     }

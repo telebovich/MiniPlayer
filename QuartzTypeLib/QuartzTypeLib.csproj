@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FilgraphManager.cs" />
+    <Compile Include="IBasicAudio.cs" />
     <Compile Include="IMediaControl.cs" />
+    <Compile Include="IVideoWindow.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

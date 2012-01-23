@@ -5,9 +5,10 @@ using System.Runtime.InteropServices;
 
 namespace QuartzTypeLib
 {
-    [ComImport, Guid("E436EBB3-524F-11CE-9F53-0020AF0BA770")]
-    public class FilgraphManager
+    [Guid("56A868B1-0AD4-11CE-B03A-0020AF0BA770"),
+    InterfaceType(ComInterfaceType.InterfaceIsDual)]
+    public interface IVideoWindow
     {
-        
+
     }
 }
