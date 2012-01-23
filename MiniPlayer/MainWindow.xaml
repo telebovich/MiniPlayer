@@ -5,10 +5,12 @@
     <Grid>
         <Menu Height="23" Name="menu" VerticalAlignment="Top" IsMainMenu="True">
             <MenuItem Header="File">
-                <MenuItem Header="Exit" />
+                <MenuItem Header="Open File..." Click="OpenFile" />
+                <Separator />
+                <MenuItem Header="Exit" Click="Exit"/>
             </MenuItem>
             <MenuItem Header="About" />
         </Menu>
-        <StatusBar Height="23" HorizontalAlignment="Left" Margin="0,288,0,0" Name="statusBar" VerticalAlignment="Top" Width="503" />
+        <StatusBar Height="23" Name="statusBar" VerticalAlignment="Bottom" />
     </Grid>
 </Window>

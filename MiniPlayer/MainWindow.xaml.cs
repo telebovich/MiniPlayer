@@ -12,6 +12,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using Microsoft.Win32;
+using QuartzTypeLib;
+
 namespace MiniPlayer
 {
     /// <summary>
@@ -22,6 +25,24 @@ namespace MiniPlayer
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void OpenFile(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFile = new OpenFileDialog();
+            openFile.Filter = "Media Files|*.mpg;*.avi;*.wma;*.mov;" +
+                        "*.wav;*.mp2;*.mp3|All Files|*.*";
+
+            if (DialogResult.Value == openFile.ShowDialog())
+            {
+                FilgraphManager filterGraph = new FilgraphManager();
+                Ime
+            }
         }
     }
 }
