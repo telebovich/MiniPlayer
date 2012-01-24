@@ -12,5 +12,6 @@
             <MenuItem Header="About" />
         </Menu>
         <StatusBar Height="23" Name="statusBar" VerticalAlignment="Bottom" />
+        <Rectangle Name="rectangle" Stroke="White" VerticalAlignment="Top" />
     </Grid>
 </Window>

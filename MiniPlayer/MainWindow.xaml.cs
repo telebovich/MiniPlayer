@@ -53,6 +53,7 @@ namespace MiniPlayer
                 try
                 {
                     m_objVideoWindow = filterGraph as IVideoWindow;
+                    m_objVideoWindow.Owner = 0;
                 }
                 catch (Exception ex)
                 {
